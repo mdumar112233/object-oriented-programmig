@@ -8,26 +8,21 @@ class SmartDevice{
     }
 }
 
-class phone extends SmartDevice{
+class Phone extends SmartDevice{
     constructor(name, price, camera) {
-        this.name = name;
-        this.price = price;
+        super(name, price);
         this.camera = camera;
-    }
-    charging(){
-        console.log('is charging');
     }
 }
 
-class Watch {
+class Watch extends SmartDevice{
     constructor(name, price, distance) {
-        this.name = name;
-        this.price = price;
+        super(name, price);
         this.distance = distance;
     }
 }
 
-class Tablet {
+class Tablet extends SmartDevice{
     constructor(name, price, isWifi) {
         this.name = name;
         this.price = price;
@@ -35,7 +30,9 @@ class Tablet {
     }
 }
 
-
+const samsung = new Phone('samsung', 3232, '8gb');
+console.log(samsung);
+console.log(samsung.charging());
 
 
 
